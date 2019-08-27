@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+<script>
+// 이름이 있는 배열
+	var emp = [];
+	emp["firstName"] = "scott";
+	emp["salary"] = 3000;
+	emp["dept"] = "총무";
+	
+	console.dir(emp);
+	document.write("<hr>");
+	
+	for(i in emp) {
+		document.write(i + " : " + emp[i] + "<br>");
+	}
+	// emp.firstName == emp[firstName]
+</script>
+</body>
+</html>

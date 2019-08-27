@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+<script>
+// 문자열 분리해서 배열에 넣기
+	var str2 = "가, 나, 다, 라";
+	var arr = str2.split(",");
+	console.dir(arr);	// dir :객체 형식으로 보여줌
+	// typeof str2 :object
+	
+// 문자열 합치기
+	var s1 = arr.join("-");
+	console.log(typeof s1);	// string
+	console.log(s1);	// 가- 나- 다- 라
+	// arr[arr.length] = "바나나"; :arr 마지막에 값 추가
+	// arr.push("추가할 값")	:return arr.length
+	// arr.pop() :맨 마지막 값이 빠져나오며 return
+	// arr.shift() :첫번째 값이 빠져나오며 return
+	// arr.unshift("추가할 값") :첫번째 값 추가
+	
+// 배열의 값을 출력
+window.onload = function() {
+	for(i = 0; i < arr.length; i++) {
+		var d = document.getElementById("result");
+		d.innerHTML += arr[i] + "<br>";
+	}
+}
+</script>
+<div id = "result"></div>
+</body>
+</html>

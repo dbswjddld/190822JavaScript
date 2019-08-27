@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script>
+	window.onload = function() {
+		// 배열 선언
+		var arr = ["../img/Jellyfish.jpg",
+				"../img/Penguins.jpg",
+				"../img/Tulips.jpg"];
+		
+		// 화면에 출력
+		/* for(i = 0; i < arr.length; i++) {
+			var d = document.getElementById("result");
+			d.innerHTML += "<img src = '" + arr[i] + "'><br>";
+		} */
+		
+		var str = "";
+		arr.forEach( function( value, index ) { // 매개변수 이름 아무렇게나 해도 됨
+			str += "<img src = '" + value + "'/>";
+		});
+		document.getElementById("result").innerHTML = str;
+	}
+	</script>
+	<div id = "result"></div>
+</body>
+</html>

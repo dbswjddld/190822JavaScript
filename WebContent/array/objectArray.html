@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+<script>
+// 객체 배열
+// {} 객체
+// [] 배열
+var d = [
+	{name:'choi', age:20, hobby:["등산","독서","게임"]}, // 배열 중첩
+	{name:'park', age:30},
+	{name:'kim', age:10}
+]
+
+// 회원 정보 출력
+	document.write("첫번째 회원의 이름? " + d[0].name + "<br>");
+	document.write("두번째 회원의 나이? " + d[1].age + "<br>");
+	
+	document.write("첫번째 회원의 취미?" + d[0].hobby + "<br>");
+	
+// typeod d :object(d 객체)
+
+// object - > string
+	let s = JSON.stringify(d);
+	// [{"name":"choi","age":20,"hobby":["등산","독서","게임"]},{"name":"park","age":30},{"name":"kim","age":10}]
+	// typeof s :string
+// string -> object
+	let o = JSON.parse(s);
+
+// 정렬(sort) 
+	//나이 오름차순
+	d.sort(function(a, b){ return a.age - b.age });
+	console.dir(d);
+	// 이름 오름차순 (문자열 비교)
+	d.sort(function(a, b){ return a.name - b.neme });
+	console.dir(d);
+</script>
+</body>
+</html>

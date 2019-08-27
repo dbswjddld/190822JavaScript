@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script>
+	// var  대신 let 쓰기!
+	let arr = ["바나나","사과","포도", "바나나"];
+	let arr2 = [];
+	
+	// arr의 내용을 arr2로 이동하기 - pop, shift
+	var length = arr.length;
+	for(i = 0; i < length; i++) {
+		let temp = arr.shift();
+		arr2[temp] = temp;
+		// 중복 없애기!! 배일 이름을 활용
+	}
+	// 출력
+	console.dir(arr2);
+	for(i in arr2) {
+		document.write(i + " : " + arr2[i] + "<br>");
+	}
+	</script>
+</body>
+</html>

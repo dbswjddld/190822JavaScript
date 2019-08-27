@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script>
+	// var  대신 let 쓰기!
+	let arr = ["바나나","사과","포도", "바나나"];
+	let arr2 = [];
+	
+	// arr의 내용을 arr2로 이동하기 - pop, shift
+	var length = arr.length;
+	for(i = 0; i < length; i++) {
+		arr2.push(arr.pop());
+	}
+	// 출력
+	document.write("arr : " + arr + "<br>");
+	document.write("arr2 : " + arr2 + "<br>");
+	</script>
+</body>
+</html>
